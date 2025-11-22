@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -13,14 +14,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const menuItems = [
+const menuItems: any[] = [
   { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
   { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
   { label: 'Services', ariaLabel: 'View our services', link: '/services' },
   { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
 ];
 
-const socialItems = [
+const socialItems: any[] = [
   { label: 'Twitter', link: 'https://twitter.com' },
   { label: 'GitHub', link: 'https://github.com' },
   { label: 'LinkedIn', link: 'https://linkedin.com' }
