@@ -1,0 +1,40 @@
+# Sankalp Shrivastav
+
+> Software developer from Agra, India with 1.5+ years of experience building production backend and full-stack systems with PHP, MySQL, Node.js, React and TypeScript. Strong in API design, performance optimisation, CI/CD and secure system design. Currently Software Developer at OEG.
+
+## Contact
+- Email: sankalpshrivastav2001@gmail.com
+- GitHub: https://github.com/Sankalp-Space
+- LinkedIn: https://linkedin.com/in/sankalp-space1
+- X: https://twitter.com/sankalp_spacex
+- LeetCode: https://leetcode.com/sankalp-space
+
+## Experience
+- Software Developer, OEG (Remote), Dec 2025 – present: backend services with 90+ REST API endpoints and 30+ MySQL tables (PHP, versioned migrations) for an Oracle ERP e-learning platform, with role-based auth, validation and rate limiting; cut first-load JavaScript by ~85% (630 KB → ~100 KB gzipped) by splitting a React 19 + TypeScript app into 108 lazy-loaded Vite chunks; generated 117 SEO pages with JSON-LD via GitHub Actions CI/CD; server-side caching layer and a cache-poisoning fix; server-side Zoom registration service; direct Zoho CRM/Freshsales sync replacing a paid Make.com automation; 48% smaller JS/CSS payload; 12 Playwright E2E tests in CI; LLM API integration with strict JSON-schema output and a regression set.
+- Full Stack Developer, DGN Infosolution (New Delhi), May – Dec 2025: delivered 5 client websites end to end on the MERN stack; built and deployed a production diagnostic-service management platform; promoted to full-time.
+- Backend Developer, Sharelog (Remote), Oct – Dec 2024: production Node.js/Express REST APIs; AWS EC2, S3 and CloudFront deployments; JWT, OAuth and rate limiting.
+
+## Education
+- B.Tech, Computer Science & Engineering, Veer Bahadur Singh Purvanchal University, 2022 – 2026 (CGPA 7.56/10)
+
+## Certifications and achievements
+- Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate (Oracle University)
+- SQL (Intermediate) (HackerRank)
+- LeetCode: 279+ problems solved, 100 Days Badge 2025, SQL 50 Badge
+- AWS Cloud Quest: Cloud Practitioner (AWS)
+
+## Skills
+- Languages: PHP, TypeScript, JavaScript (ES6+), SQL, C++, Go
+- Frontend: React, Next.js, Vite, Tailwind CSS, Three.js, code splitting, Core Web Vitals
+- Backend: Node.js, Express, REST APIs, JWT/OAuth, caching, rate limiting, WordPress plugins
+- Data & Cloud: MySQL (schema design, migrations), MongoDB, PostgreSQL, Supabase, AWS (EC2, S3, CloudFront)
+- DevOps & Testing: GitHub Actions (CI/CD), Playwright (E2E), Git, Docker, Postman, Jira, Linux
+- AI & Integrations: LLM API integration, LangChain, Model Context Protocol (MCP), Zoom API, Zoho CRM/Freshsales APIs, Razorpay, Schema.org/JSON-LD
+
+## Projects
+- Imagify: AI text-to-image SaaS with JWT auth, credits and Razorpay payments (React, Node.js, Express, MongoDB). Live: https://imagify1-13gr.onrender.com · Code: https://github.com/Sankalp-Space/Imagify1
+- DGN Infosolution website: company site with a CMS for services and pricing (React, Node.js, Express, MongoDB, Tailwind CSS). Live: https://dgni.in
+- Samatha Stay: website for a Himalayan homestay in Munsiyari (Next.js, TypeScript, Tailwind CSS). Live: https://samathastay.vercel.app
+- Smart Bookmarks: private bookmarks with realtime sync and row-level security (Next.js 16, Supabase). Code: https://github.com/Sankalp-Space/abstrabit
+- Realtime Tracker: live location map over Socket.io and Leaflet. Code: https://github.com/Sankalp-Space/Realtime-Trackerr
+- MCP Currency Server: Model Context Protocol tool server for AI agents. Code: https://github.com/Sankalp-Space/MCP-server

@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-07T00:00:00Z",
+  "title": "Design System: Sankalp Shrivastav",
+  "extensions": {
+    "colorMeta": {
+      "space": { "role": "neutral", "displayName": "Deep Space", "canonical": "#020308", "tonalRamp": ["#010104", "#020308", "#0a0d18", "#151a2a", "#262c40", "#454b60", "#7c8195", "#c9ccd6"] },
+      "ink": { "role": "neutral", "displayName": "Bone Ink", "canonical": "#f2f0ea", "tonalRamp": ["#2a2925", "#4a4842", "#6e6b63", "#948f86", "#b7b3a9", "#d6d3ca", "#f2f0ea", "#fbfaf7"] },
+      "ink-dim": { "role": "neutral", "displayName": "Starlight Grey", "canonical": "#b9bcc7", "tonalRamp": ["#20222a", "#383b46", "#555966", "#737785", "#9599a6", "#b9bcc7", "#d5d7de", "#eff0f3"] },
+      "ink-faint": { "role": "neutral", "displayName": "Faint Telemetry", "canonical": "#858a9a", "tonalRamp": ["#1d1f25", "#33363f", "#4c505d", "#666b7a", "#858a9a", "#a3a7b4", "#c6c9d2", "#e8e9ed"] },
+      "flare": { "role": "primary", "displayName": "Sunlight Amber", "canonical": "#ffb36b", "tonalRamp": ["#3d2207", "#6b3d10", "#9a5a1c", "#cc7d34", "#f09a4f", "#ffb36b", "#ffd2a5", "#fff0e0"] },
+      "signal": { "role": "tertiary", "displayName": "Signal Green", "canonical": "#59e3a7", "tonalRamp": ["#06301f", "#0d5236", "#16774f", "#239d6a", "#3bc28a", "#59e3a7", "#9cefc9", "#e0faee"] },
+      "hairline": { "role": "neutral", "displayName": "Hairline", "canonical": "rgb(255 255 255 / 0.12)", "tonalRamp": ["rgb(255 255 255 / 0.04)", "rgb(255 255 255 / 0.06)", "rgb(255 255 255 / 0.08)", "rgb(255 255 255 / 0.10)", "rgb(255 255 255 / 0.12)", "rgb(255 255 255 / 0.16)", "rgb(255 255 255 / 0.20)", "rgb(255 255 255 / 0.24)"] },
+      "hairline-strong": { "role": "neutral", "displayName": "Strong Hairline", "canonical": "rgb(255 255 255 / 0.24)", "tonalRamp": ["rgb(255 255 255 / 0.12)", "rgb(255 255 255 / 0.16)", "rgb(255 255 255 / 0.20)", "rgb(255 255 255 / 0.24)", "rgb(255 255 255 / 0.30)", "rgb(255 255 255 / 0.40)", "rgb(255 255 255 / 0.55)", "rgb(255 255 255 / 0.70)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display (brush)", "purpose": "The hero name and the closing line; paints in left to right." },
+      "headline": { "displayName": "Headline (brush)", "purpose": "Chapter and mission titles." },
+      "title": { "displayName": "Title", "purpose": "Role line, mission summaries, log entry titles." },
+      "body": { "displayName": "Body", "purpose": "Paragraphs in ink-dim, 30-36rem measure." },
+      "body-sm": { "displayName": "Body small", "purpose": "Mission details, log notes, education lines." },
+      "label": { "displayName": "Telemetry label", "purpose": "Uppercase mono labels: readout, fact keys, list captions, status lines." },
+      "brush-aside": { "displayName": "Brush aside", "purpose": "Short amber painted notes inside text (constellation name, fun fact)." }
+    },
+    "shadows": [
+      { "name": "float", "value": "0 10px 26px -10px rgb(0 0 0 / 0.9)", "purpose": "Skill-star cores and stickers floating in space." },
+      { "name": "frame-drop", "value": "0 30px 60px -30px rgb(0 0 0 / 0.9)", "purpose": "Mission screenshot frames." },
+      { "name": "brush-halo", "value": "text-shadow: 0 2px 30px rgb(2 3 8 / 0.55)", "purpose": "All brush type, so paint reads over bright stars." },
+      { "name": "sticker-rim", "value": "inset 0 0 0 2px rgb(255 255 255 / 0.9)", "purpose": "The white die-cut rim on stickers, paired with float." },
+      { "name": "live-glow", "value": "0 0 12px var(--signal)", "purpose": "The current flight-log node only." },
+      { "name": "pulse-glow", "value": "drop-shadow(0 0 4px var(--flare))", "purpose": "Light pulses travelling along constellation lines." },
+      { "name": "brand-glow", "value": "0 0 28px -2px color-mix(in srgb, var(--brand) 55%, transparent)", "purpose": "A hovered skill star." },
+      { "name": "scrim-side", "value": "linear-gradient(90deg, rgb(2 3 8 / 0.82) 0%, rgb(2 3 8 / 0.7) 40%, rgb(2 3 8 / 0) 66%)", "purpose": "Directional darkening behind a text column (mirrored at 270deg for right-side chapters)." },
+      { "name": "scrim-wide", "value": "linear-gradient(90deg, rgb(2 3 8 / 0.9) 0%, rgb(2 3 8 / 0.82) 45%, rgb(2 3 8 / 0) 72%)", "purpose": "Dense chapters (Toolkit)." },
+      { "name": "scrim-mobile", "value": "linear-gradient(180deg, rgb(2 3 8 / 0) 30%, rgb(2 3 8 / 0.88) 62%)", "purpose": "Below 768px, text stacks at the bottom under the planet." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The single easing for every reveal, hover and transition." },
+      { "name": "paint-in", "value": "clip-path inset(-10% 100% -20% 0) to inset(-10% -5% -20% 0), x -14px to 0, 1.25s ease-out", "purpose": "Brush headlines reveal left to right as one stroke." },
+      { "name": "swash-draw", "value": "pathLength 0 to 1, 1.1s ease-out", "purpose": "Amber swash under display lines." },
+      { "name": "rise", "value": "opacity 0 to 1, y 18px to 0, 0.9s ease-out, once", "purpose": "Body copy and groups settling after the headline." },
+      { "name": "hover", "value": "0.35s ease-out", "purpose": "Button fill/lift, border and colour changes." },
+      { "name": "twinkle", "value": "3.2s ease-in-out infinite, opacity 0.35-1, scale 0.85-1.12", "purpose": "Skill-star halos, staggered." },
+      { "name": "dust", "value": "4.2s ease-in-out infinite, opacity 0.1-0.75", "purpose": "Background motes in the constellation field." },
+      { "name": "pulse-run", "value": "3.8s linear infinite, dash 7/200", "purpose": "Amber light pulses along constellation lines." },
+      { "name": "signal-bars", "value": "1.4s ease-in-out infinite, 0.2s stagger", "purpose": "Live signal chip." },
+      { "name": "tab-cycle", "value": "6500ms, progress scaleX 0 to 1 linear", "purpose": "Toolkit auto-cycle and its stories-style progress bar." },
+      { "name": "nav-spring", "value": "spring stiffness 380, damping 34", "purpose": "Active-chapter underline moving between links." },
+      { "name": "sticker-spring", "value": "spring stiffness 420, damping 18, 0.14s stagger", "purpose": "Stickers slapped onto the hero name." },
+      { "name": "reduced-motion", "value": "prefers-reduced-motion: reduce", "purpose": "All loops stop, reveals render in place, cursor ring hidden, auto-cycle off." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Pill",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one bright action per view; turns amber and lifts on hover.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Open résumé <svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 0.55rem; background: var(--ink, #f2f0ea); color: var(--space, #020308); font-family: 'Geist Variable', system-ui, sans-serif; font-weight: 560; font-size: 15px; padding: 0.8rem 1.3rem; border-radius: 999px; text-decoration: none; transition: background 0.35s cubic-bezier(0.16,1,0.3,1), transform 0.35s cubic-bezier(0.16,1,0.3,1); } .ds-btn-primary:hover { background: var(--flare, #ffb36b); transform: translateY(-2px); } .ds-btn-primary:active { transform: translateY(0); } .ds-btn-primary:focus-visible { outline: 2px solid var(--flare, #ffb36b); outline-offset: 4px; }"
+    },
+    {
+      "name": "Quiet Pill",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Every secondary action: a strong-hairline outline pill.",
+      "html": "<a class=\"ds-btn-quiet\" href=\"#\">Say hi</a>",
+      "css": ".ds-btn-quiet { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--ink, #f2f0ea); font-family: 'Geist Variable', system-ui, sans-serif; font-weight: 500; font-size: 15px; padding: 0.78rem 1.2rem; border-radius: 999px; border: 1px solid rgb(255 255 255 / 0.24); text-decoration: none; transition: border-color 0.35s cubic-bezier(0.16,1,0.3,1), background 0.35s cubic-bezier(0.16,1,0.3,1); } .ds-btn-quiet:hover { border-color: var(--ink, #f2f0ea); background: rgb(255 255 255 / 0.06); } .ds-btn-quiet:focus-visible { outline: 2px solid var(--flare, #ffb36b); outline-offset: 4px; }"
+    },
+    {
+      "name": "Constellation Tabs",
+      "kind": "nav",
+      "refersTo": "tab-active",
+      "description": "Pill tabs; the active one is solid ink with an amber stories-style progress bar while auto-cycling.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\"><button class=\"ds-tab is-on\" role=\"tab\" aria-selected=\"true\"><span>Frontend</span><i class=\"ds-tab-progress\"></i></button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\">Backend</button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\">Data &amp; Cloud</button></div>",
+      "css": ".ds-tabs { display: flex; flex-wrap: wrap; gap: 8px; } .ds-tab { position: relative; overflow: hidden; border-radius: 999px; padding: 8px 16px; font: 14px 'Geist Variable', system-ui, sans-serif; background: transparent; color: var(--ink-dim, #b9bcc7); border: 1px solid rgb(255 255 255 / 0.24); cursor: pointer; transition: color 0.3s, border-color 0.3s, background 0.3s; } .ds-tab:hover { border-color: var(--ink, #f2f0ea); color: var(--ink, #f2f0ea); } .ds-tab:focus-visible { outline: 2px solid var(--flare, #ffb36b); outline-offset: 4px; } .ds-tab.is-on { background: var(--ink, #f2f0ea); color: var(--space, #020308); border-color: transparent; } .ds-tab span { position: relative; z-index: 1; } .ds-tab-progress { position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background: var(--flare, #ffb36b); transform-origin: left; animation: ds-tab-progress 6.5s linear infinite; } @keyframes ds-tab-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } } @media (prefers-reduced-motion: reduce) { .ds-tab-progress { display: none; } }"
+    },
+    {
+      "name": "Stack and Link Chips",
+      "kind": "chip",
+      "refersTo": "chip-link",
+      "description": "Outline pills: static stack chips, and link chips that turn amber on hover.",
+      "html": "<ul class=\"ds-chips\"><li class=\"ds-chip\">Next.js</li><li class=\"ds-chip\">Supabase</li><li><a class=\"ds-chip-link\" href=\"#\">URL shortener <span>Go</span> <svg viewBox=\"0 0 24 24\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a></li></ul>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0; } .ds-chip { border-radius: 999px; border: 1px solid rgb(255 255 255 / 0.24); padding: 4px 10px; font: 13px 'Geist Variable', system-ui, sans-serif; color: var(--ink, #f2f0ea); } .ds-chip-link { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; border: 1px solid rgb(255 255 255 / 0.24); padding: 6px 12px; font: 14px 'Geist Variable', system-ui, sans-serif; color: var(--ink, #f2f0ea); text-decoration: none; transition: color 0.3s, border-color 0.3s; } .ds-chip-link span { color: var(--ink-faint, #858a9a); transition: color 0.3s; } .ds-chip-link:hover, .ds-chip-link:hover span { color: var(--flare, #ffb36b); border-color: var(--flare, #ffb36b); } .ds-chip-link:focus-visible { outline: 2px solid var(--flare, #ffb36b); outline-offset: 4px; }"
+    },
+    {
+      "name": "Signal Chip",
+      "kind": "chip",
+      "refersTo": "signal-chip",
+      "description": "Live status: breathing green bars, a green status word, an ink-dim line.",
+      "html": "<span class=\"ds-signal\"><span class=\"ds-signal-bars\" aria-hidden=\"true\"><i></i><i></i><i></i></span><span><b>Signal live</b> · currently shipping</span></span>",
+      "css": ".ds-signal { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.45rem 0.9rem 0.45rem 0.7rem; border-radius: 999px; border: 1px solid rgb(255 255 255 / 0.24); background: rgb(2 3 8 / 0.55); font: 14px 'Geist Variable', system-ui, sans-serif; color: var(--ink-dim, #b9bcc7); } .ds-signal b { font-weight: 400; color: var(--signal, #59e3a7); } .ds-signal-bars { display: inline-flex; align-items: flex-end; gap: 2px; height: 12px; } .ds-signal-bars i { width: 3px; border-radius: 2px; background: var(--signal, #59e3a7); animation: ds-bars 1.4s ease-in-out infinite; } .ds-signal-bars i:nth-child(1) { height: 40%; } .ds-signal-bars i:nth-child(2) { height: 70%; animation-delay: 0.2s; } .ds-signal-bars i:nth-child(3) { height: 100%; animation-delay: 0.4s; } @keyframes ds-bars { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } } @media (prefers-reduced-motion: reduce) { .ds-signal-bars i { animation: none; } }"
+    },
+    {
+      "name": "Stickers",
+      "kind": "custom",
+      "refersTo": "sticker",
+      "description": "Rotated fact stickers slapped on the hero name; three at most, second is amber.",
+      "html": "<div class=\"ds-stickers\"><span class=\"ds-sticker\" style=\"transform: rotate(-7deg)\">B.Tech CSE '26</span><span class=\"ds-sticker\" style=\"transform: rotate(5deg)\">4× certified</span><span class=\"ds-sticker\" style=\"transform: rotate(-3deg)\">MERN → AI</span></div>",
+      "css": ".ds-stickers { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; } .ds-sticker { display: inline-block; padding: 0.38rem 0.75rem; border-radius: 8px; background: var(--ink, #f2f0ea); color: var(--space, #020308); font: 600 13px 'Geist Variable', system-ui, sans-serif; box-shadow: 0 10px 24px -10px rgb(0 0 0 / 0.9), inset 0 0 0 2px rgb(255 255 255 / 0.9); transition: transform 0.45s cubic-bezier(0.16,1,0.3,1); user-select: none; } .ds-sticker:nth-child(2) { background: var(--flare, #ffb36b); } .ds-sticker:hover { transform: rotate(0deg) scale(1.08) !important; }"
+    },
+    {
+      "name": "Chapter Navigation",
+      "kind": "nav",
+      "description": "Brush wordmark, ink-faint chapter links with a 1px amber underline on the current chapter, compact résumé pill.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-wordmark\" href=\"#\">Sankalp<span>.</span></a><nav><a href=\"#\">Origin</a><a href=\"#\" class=\"is-on\" aria-current=\"location\">Toolkit</a><a href=\"#\">Missions</a><a href=\"#\">Contact</a><a class=\"ds-nav-cta\" href=\"#\">Résumé</a></nav></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 32px; background: linear-gradient(180deg, #020308 0%, #020308 55%, rgb(2 3 8 / 0) 100%); } .ds-wordmark { font-family: 'Permanent Marker', 'Segoe Print', cursive; font-size: 22px; line-height: 1; color: var(--ink, #f2f0ea); text-decoration: none; transition: color 0.3s; } .ds-wordmark span { color: var(--flare, #ffb36b); } .ds-wordmark:hover { color: var(--flare, #ffb36b); } .ds-nav nav { display: flex; align-items: center; gap: 4px; } .ds-nav nav a { position: relative; padding: 8px 12px; font: 14px 'Geist Variable', system-ui, sans-serif; color: var(--ink-faint, #858a9a); text-decoration: none; transition: color 0.3s; } .ds-nav nav a:hover, .ds-nav nav a.is-on { color: var(--ink, #f2f0ea); } .ds-nav nav a.is-on::after { content: ''; position: absolute; left: 12px; right: 12px; bottom: -2px; height: 1px; background: var(--flare, #ffb36b); } .ds-nav nav a:focus-visible { outline: 2px solid var(--flare, #ffb36b); outline-offset: 4px; } .ds-nav nav a.ds-nav-cta { margin-left: 12px; padding: 8px 1.3rem; border-radius: 999px; background: var(--ink, #f2f0ea); color: var(--space, #020308); font-weight: 560; transition: background 0.35s cubic-bezier(0.16,1,0.3,1); } .ds-nav nav a.ds-nav-cta:hover { background: var(--flare, #ffb36b); }"
+    },
+    {
+      "name": "Skill Star",
+      "kind": "custom",
+      "description": "Signature: a brand-logo star with a twinkling halo; hover takes the brand colour, glows and flares.",
+      "html": "<div class=\"ds-star\" style=\"--brand:#61dafb\"><span class=\"ds-star-halo\"></span><svg class=\"ds-star-flare\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 0 L13.2 10.8 L24 12 L13.2 13.2 L12 24 L10.8 13.2 L0 12 L10.8 10.8 Z\" fill=\"currentColor\"/></svg><span class=\"ds-star-core\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"2.2\" fill=\"currentColor\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" transform=\"rotate(60 12 12)\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" transform=\"rotate(120 12 12)\"/></svg></span><span class=\"ds-star-label\">React</span></div>",
+      "css": ".ds-star { position: relative; width: 0; height: 0; margin: 60px; } .ds-star-core { position: absolute; left: -25px; top: -25px; width: 50px; height: 50px; border-radius: 999px; display: grid; place-items: center; color: var(--ink, #f2f0ea); background: radial-gradient(circle at 35% 30%, rgb(255 255 255 / 0.14), rgb(8 10 22 / 0.92) 70%); border: 1px solid rgb(255 255 255 / 0.18); box-shadow: 0 10px 26px -10px rgb(0 0 0 / 0.9); transition: color 0.35s cubic-bezier(0.16,1,0.3,1), border-color 0.35s cubic-bezier(0.16,1,0.3,1), transform 0.45s cubic-bezier(0.16,1,0.3,1), box-shadow 0.45s cubic-bezier(0.16,1,0.3,1); } .ds-star:hover .ds-star-core { color: var(--brand); border-color: color-mix(in srgb, var(--brand) 70%, white); transform: scale(1.14); box-shadow: 0 0 28px -2px color-mix(in srgb, var(--brand) 55%, transparent); } .ds-star-halo { position: absolute; left: -42px; top: -42px; width: 84px; height: 84px; border-radius: 999px; background: radial-gradient(circle, color-mix(in srgb, var(--brand) 32%, transparent) 0%, transparent 66%); animation: ds-twinkle 3.2s ease-in-out infinite; pointer-events: none; } .ds-star-flare { position: absolute; left: -48px; top: -48px; width: 96px; height: 96px; color: rgb(255 255 255 / 0.55); opacity: 0; transform: scale(0.4) rotate(0deg); transition: opacity 0.4s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); pointer-events: none; } .ds-star:hover .ds-star-flare { opacity: 0.9; transform: scale(1) rotate(45deg); } .ds-star-label { position: absolute; top: 33px; left: 0; transform: translateX(-50%); white-space: nowrap; font: 13px 'Geist Variable', system-ui, sans-serif; color: var(--ink-dim, #b9bcc7); transition: color 0.3s; } .ds-star:hover .ds-star-label { color: var(--ink, #f2f0ea); } @keyframes ds-twinkle { 0%, 100% { opacity: 0.35; transform: scale(0.85); } 50% { opacity: 1; transform: scale(1.12); } } @media (prefers-reduced-motion: reduce) { .ds-star-halo { animation: none; } }"
+    },
+    {
+      "name": "Telemetry Label and Hairline Row",
+      "kind": "card",
+      "description": "Data as open hairline rows with mono uppercase keys; never a card.",
+      "html": "<dl class=\"ds-facts\"><div><dt>Based in</dt><dd>Agra, India</dd></div><div><dt>Focus</dt><dd>Full-stack</dd></div><div><dt>Shipping</dt><dd>MERN to AI</dd></div></dl>",
+      "css": ".ds-facts { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgb(255 255 255 / 0.12); border-bottom: 1px solid rgb(255 255 255 / 0.12); margin: 0; } .ds-facts > div { padding: 16px 0; } .ds-facts > div + div { border-left: 1px solid rgb(255 255 255 / 0.12); padding-left: 16px; } .ds-facts dt { font-family: 'Geist Mono Variable', ui-monospace, monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint, #858a9a); } .ds-facts dd { margin: 4px 0 0; font: 16px 'Geist Variable', system-ui, sans-serif; color: var(--ink, #f2f0ea); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Hand-Painted Flight Log",
+    "overview": "The page is a real flight through the solar system, and the story is painted directly onto the window. Near-black space carries a live WebGL scene (NASA-derived planet maps lit by one sun, a real Milky Way, a drifting astronaut), and every word sits straight on that space. Legibility comes from a directional darkening that falls off toward the planet, never from a box, card or glass panel. One body per chapter; the visitor's scroll is the camera's burn from one world to the next.\n\nTwo voices share the frame. Permanent Marker is the human one: huge, loaded with paint, revealing left to right like a single brush stroke, with an amber swash dragged under the biggest lines. Geist and Geist Mono are the instrument: calm body copy, uppercase telemetry labels, hairline rows. A layer of playful marks (rotated stickers on the name, a live signal chip with breathing bars, a trailing amber cursor ring, constellations of brand-logo stars) adds Gen-Z energy without breaking the realism, because each of them behaves like light or like a sticker on a visor, not like UI furniture.\n\nDensity is low and cinematic. Each chapter's content is budgeted to fit one desktop viewport on its own side of the screen, alternating left and right so the planet always has the other half.",
+    "keyCharacteristics": [
+      "Text sits directly on space over a side-falloff scrim; no boxed panels.",
+      "One accent: sunlight amber. Signal green means \"live\" and nothing else.",
+      "Brush display type at poster scale; mono uppercase labels as telemetry.",
+      "Light pill as the one primary action per view; hairline outline for the rest.",
+      "Motion is the journey: paint-in headlines, drawn swashes and lines, twinkling stars, a single ease-out curve."
+    ],
+    "rules": [
+      { "name": "The One Sun Rule", "body": "Amber is the only accent hue in the interface. Brand colours from skill logos appear only inside a hovered skill star; planet atmospheres belong to the 3D scene, not the UI.", "section": "colors" },
+      { "name": "The Live Light Rule", "body": "Signal green marks something that is live or current right now. If it is not live, it is not green.", "section": "colors" },
+      { "name": "The Paint-In Rule", "body": "Every brush headline reveals left to right with a clip-path sweep and a 14px drift (1.25s, ease-out), as one loaded stroke. Body copy never paints; it rises.", "section": "typography" },
+      { "name": "The Brush Is For Voices Rule", "body": "Permanent Marker is for headlines, the wordmark, mobile-menu chapter links and short asides. Never for paragraphs, labels, buttons or data.", "section": "typography" },
+      { "name": "The Scrim Not Box Rule", "body": "Legibility comes from a directional gradient behind the column, never from a container with a background and border.", "section": "elevation" },
+      { "name": "The Only Light Glows Rule", "body": "A glow is reserved for something that is a light: a star, a pulse, a live status. Buttons, chips and text never glow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do set every text column directly on space over the side-falloff scrim (0.82 / 0.7 / 0 at 66%), alternating sides chapter by chapter.",
+      "Do keep amber (flare) the only interface accent; use it as strokes, underlines, edges and hover states.",
+      "Do reserve signal green for live or current status.",
+      "Do paint brush headlines in with the left-to-right clip reveal and let body copy rise 18px after it, on the single ease-out curve `cubic-bezier(0.16, 1, 0.3, 1)`.",
+      "Do keep one light pill per view and make every other action an outline pill.",
+      "Do carry data as hairline rows with mono uppercase labels, not as cards.",
+      "Do give every looping animation (twinkle, dust, bars, scroll cue, pulses, auto-cycle) a still state under `prefers-reduced-motion`, and keep the page complete without it.",
+      "Do budget each chapter's content to fit one desktop viewport."
+    ],
+    "donts": [
+      "Don't put text in boxed panels, cards or glass surfaces; the only surface allowed is the mobile menu sheet.",
+      "Don't introduce a second accent hue in the interface or use brand logo colours outside a hovered skill star.",
+      "Don't glow buttons, chips or type; glows belong to stars, pulses and live status.",
+      "Don't set paragraphs, labels or buttons in Permanent Marker.",
+      "Don't use pure white for text; ink is warm bone.",
+      "Don't use ink-faint for running body copy; it is for labels only.",
+      "Don't render planets as flat, cartoon or toy illustrations; bodies are real lit maps in the WebGL scene."
+    ]
+  }
+}
