@@ -17,7 +17,7 @@ export const profile = {
     "1.5+ years shipping production backends and full-stack apps: PHP and Node APIs, MySQL schemas, React + TypeScript frontends, CI/CD and LLM integrations.",
   email: "sankalpshrivastav2001@gmail.com",
   resume:
-    "https://drive.google.com/file/d/1Qk8m1rkLylj9toyeD0CRwU_ynWnF22uG/view?usp=drive_link",
+    "https://drive.google.com/file/d/1JyjAFG7smS6IxKEdB9f4NtKsHgJ0JSVg/view?usp=sharing",
   funFact:
     "I write better code at 2 AM than at 10 AM. My console has seen more drama than Netflix.",
 };
